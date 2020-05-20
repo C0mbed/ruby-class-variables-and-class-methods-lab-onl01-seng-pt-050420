@@ -32,19 +32,14 @@ class Song
   end
   
   def self.genre_count
-    puts @@genre_count
     if @@genres_count.length > 0
-       @@genres.count do |genre, count|
-         if genre == @genre
-           @@genres_count[genre]=count += 1
-         else
-           @@genre_count[genre] = 1
-         end
+      @@genres.count do |genre, count|
+        @@genres_count[genre]=count += 1
+      end
     else
       @@genre_count[@genre] = 1
     end
-      @@genre_count
-    end
+    @@genre_count
   end
   
   def self.artist_count
